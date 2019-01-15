@@ -1,16 +1,25 @@
-# Compiled class file
+#.gitignore for Java projects (using eclipse)
+
+# Linux
+# backup files
+*~
+
+# Windows
+# thumbnails
+Thumbs.db
+
+# Mac OS X
+# metadata
+.DS_Store
+# thumbnails
+._*
+
+# GIT
+.git/
+
+# Java
 *.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# packages 
 *.jar
 *.war
 *.nar
@@ -18,6 +27,23 @@
 *.zip
 *.tar.gz
 *.rar
+
+# Eclipse
+bin/
+.settings/
+.buildpath
+.classpath
+.project
+
+# Gradle
+build/
+.gradle/
+
+# Logging
+*.log
+
+# jME (binaries)
+*.so
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
