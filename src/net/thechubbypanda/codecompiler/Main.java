@@ -59,7 +59,7 @@ public class Main {
 		if (args.length > 0) {
 			new Main(args[0]);
 		} else {
-			System.err.println("Please provide absolute path to code directory e.g: \njava -jar codeCompile.jar \"C:/dev/prject/src\"");
+			System.err.println("Please provide absolute path to code directory e.g: \njava -jar codeCompile.jar \"C:/dev/project/src\"");
 		}
 	}
 }
