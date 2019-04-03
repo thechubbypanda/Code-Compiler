@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class Main {
@@ -14,11 +13,7 @@ public class Main {
 		File srcDir = new File(path);
 		ArrayList<File> allFiles = getFilesInDir(srcDir);
 
-		Collections.sort(allFiles, new Comparator<File>() {
-			public int compare(File f1, File f2) {
-				return f1.getName().compareTo(f2.getName());
-			}
-		});
+		allFiles.sort(Comparator.comparing(File::getName));
 
 		File outputFile = new File("compiledCode.txt");
 
@@ -48,9 +43,9 @@ public class Main {
 	}
 
 	private ArrayList<File> getFilesInDir(File dir) {
-		ArrayList<File> output = new ArrayList<File>();
+		ArrayList<File> output = new ArrayList<>();
 		File[] files = dir.listFiles();
-		for (File file : files) {
+		for (File file : files != null ? files : new File[0]) {
 			if (!file.isDirectory()) {
 				output.add(file);
 			} else {
